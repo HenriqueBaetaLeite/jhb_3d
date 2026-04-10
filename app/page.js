@@ -1,31 +1,38 @@
+import Image from "next/image";
+import logo from "./logo.png";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white flex items-center justify-center px-4">
-      
+    <main className="min-h-screen bg-linear-to-br from-black via-gray-900 to-black text-white flex items-center justify-center px-4">
       <div className="max-w-xl w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl text-center">
-        
         {/* LOGO */}
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent mb-2">
-          JHB 3D
-        </h1>
+        <Image
+          src={logo}
+          alt="Logo JHB 3D"
+          width={250}
+          height="auto"
+          className="block mx-auto object-contain mb-3"
+        />
 
         <p className="text-gray-400 mb-6">
           Impressão 3D Gamer & Personalizados 🎮
         </p>
 
         {/* HISTÓRIA */}
-        <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+        <div className="space-y-4 text-gray-300 text-xl leading-relaxed">
           <p>
-            A JHB 3D nasceu de algo muito especial: a vontade de aprender e crescer juntos.
+            A JHB 3D nasceu de algo muito especial: a vontade de aprender e
+            crescer juntos.
           </p>
 
           <p>
-            Somos pai e filho construindo um negócio de impressão 3D, criando produtos
-            únicos, principalmente para o mundo gamer.
+            Somos pai e filho construindo um negócio de impressão 3D, criando
+            produtos únicos, principalmente para o mundo gamer.
           </p>
 
           <p>
-            Cada peça que produzimos carrega dedicação, aprendizado e a alegria de criar algo do zero.
+            Cada peça que produzimos carrega dedicação, aprendizado e a alegria
+            de criar algo do zero.
           </p>
 
           <p className="text-white font-semibold">
@@ -35,25 +42,53 @@ export default function Home() {
 
         {/* BOTÕES */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          
           <a
-            href="https://instagram.com/jhb3d"
+            href="https://instagram.com/jhb3d_14"
             target="_blank"
-            className="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-500 font-semibold hover:scale-105 transition"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl 
+             bg-linear-to-r from-purple-600 to-cyan-500 
+             text-white font-semibold 
+             shadow-lg hover:shadow-xl
+             hover:brightness-110
+             hover:scale-105 transition-all duration-300"
           >
-            Ver no Instagram
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 71 72"
+              fill="currentColor"
+              className="shrink-0"
+            >
+              <path d="M27.3762 35.7808C27.3762 31.1786 31.1083 27.4468 35.7132 27.4468C40.3182 27.4468 44.0522 31.1786 44.0522 35.7808C44.0522 40.383 40.3182 44.1148 35.7132 44.1148C31.1083 44.1148 27.3762 40.383 27.3762 35.7808ZM22.8683 35.7808C22.8683 42.8708 28.619 48.618 35.7132 48.618C42.8075 48.618 48.5581 42.8708 48.5581 35.7808C48.5581 28.6908 42.8075 22.9436 35.7132 22.9436C28.619 22.9436 22.8683 28.6908 22.8683 35.7808ZM46.0648 22.4346C46.0646 23.0279 46.2404 23.608 46.5701 24.1015C46.8997 24.595 47.3684 24.9797 47.9168 25.2069C48.4652 25.4342 49.0688 25.4939 49.6511 25.3784C50.2334 25.2628 50.7684 24.9773 51.1884 24.5579C51.6084 24.1385 51.8945 23.6041 52.0105 23.0222C52.1266 22.4403 52.0674 21.8371 51.8404 21.2888C51.6134 20.7406 51.2289 20.2719 50.7354 19.942C50.2418 19.6122 49.6615 19.436 49.0679 19.4358H49.0667C48.2708 19.4361 47.5077 19.7522 46.9449 20.3144C46.3821 20.8767 46.0655 21.6392 46.0648 22.4346ZM25.6072 56.1302C23.1683 56.0192 21.8427 55.6132 20.9618 55.2702C19.7939 54.8158 18.9606 54.2746 18.0845 53.4002C17.2083 52.5258 16.666 51.6938 16.2133 50.5266C15.8699 49.6466 15.4637 48.3214 15.3528 45.884C15.2316 43.2488 15.2073 42.4572 15.2073 35.781C15.2073 29.1048 15.2336 28.3154 15.3528 25.678C15.4639 23.2406 15.8731 21.918 16.2133 21.0354C16.668 19.8682 17.2095 19.0354 18.0845 18.1598C18.9594 17.2842 19.7919 16.7422 20.9618 16.2898C21.8423 15.9466 23.1683 15.5406 25.6072 15.4298C28.244 15.3086 29.036 15.2844 35.7132 15.2844C42.3904 15.2844 43.1833 15.3106 45.8223 15.4298C48.2612 15.5408 49.5846 15.9498 50.4677 16.2898C51.6356 16.7422 52.4689 17.2854 53.345 18.1598C54.2211 19.0342 54.7615 19.8682 55.2161 21.0354C55.5595 21.9154 55.9658 23.2406 56.0767 25.678C56.1979 28.3154 56.2221 29.1048 56.2221 35.781C56.2221 42.4572 56.1979 43.2466 56.0767 45.884C55.9656 48.3214 55.5573 49.6462 55.2161 50.5266C54.7615 51.6938 54.2199 52.5266 53.345 53.4002C52.4701 54.2738 51.6356 54.8158 50.4677 55.2702C49.5872 55.6134 48.2612 56.0194 45.8223 56.1302C43.1855 56.2514 42.3934 56.2756 35.7132 56.2756C29.033 56.2756 28.2432 56.2514 25.6072 56.1302Z" />
+            </svg>
+
+            <span>Ver no Instagram</span>
           </a>
 
           <a
             href="https://wa.me/5531996326773"
             target="_blank"
-            className="px-6 py-3 rounded-lg bg-green-500 font-semibold hover:scale-105 transition"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl 
+             bg-green-500 text-white font-semibold 
+             shadow-lg hover:shadow-xl
+             hover:brightness-110
+             hover:scale-105 transition-all duration-300"
           >
-            Falar no WhatsApp
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 71 72"
+              fill="currentColor"
+              className="shrink-0"
+            >
+              <path d="M27.3762 35.7808C27.3762 31.1786 31.1083 27.4468 35.7132 27.4468C40.3182 27.4468 44.0522 31.1786 44.0522 35.7808C44.0522 40.383 40.3182 44.1148 35.7132 44.1148C31.1083 44.1148 27.3762 40.383 27.3762 35.7808ZM22.8683 35.7808C22.8683 42.8708 28.619 48.618 35.7132 48.618C42.8075 48.618 48.5581 42.8708 48.5581 35.7808C48.5581 28.6908 42.8075 22.9436 35.7132 22.9436C28.619 22.9436 22.8683 28.6908 22.8683 35.7808ZM46.0648 22.4346C46.0646 23.0279 46.2404 23.608 46.5701 24.1015C46.8997 24.595 47.3684 24.9797 47.9168 25.2069C48.4652 25.4342 49.0688 25.4939 49.6511 25.3784C50.2334 25.2628 50.7684 24.9773 51.1884 24.5579C51.6084 24.1385 51.8945 23.6041 52.0105 23.0222C52.1266 22.4403 52.0674 21.8371 51.8404 21.2888C51.6134 20.7406 51.2289 20.2719 50.7354 19.942C50.2418 19.6122 49.6615 19.436 49.0679 19.4358H49.0667C48.2708 19.4361 47.5077 19.7522 46.9449 20.3144C46.3821 20.8767 46.0655 21.6392 46.0648 22.4346ZM25.6072 56.1302C23.1683 56.0192 21.8427 55.6132 20.9618 55.2702C19.7939 54.8158 18.9606 54.2746 18.0845 53.4002C17.2083 52.5258 16.666 51.6938 16.2133 50.5266C15.8699 49.6466 15.4637 48.3214 15.3528 45.884C15.2316 43.2488 15.2073 42.4572 15.2073 35.781C15.2073 29.1048 15.2336 28.3154 15.3528 25.678C15.4639 23.2406 15.8731 21.918 16.2133 21.0354C16.668 19.8682 17.2095 19.0354 18.0845 18.1598C18.9594 17.2842 19.7919 16.7422 20.9618 16.2898C21.8423 15.9466 23.1683 15.5406 25.6072 15.4298C28.244 15.3086 29.036 15.2844 35.7132 15.2844C42.3904 15.2844 43.1833 15.3106 45.8223 15.4298C48.2612 15.5408 49.5846 15.9498 50.4677 16.2898C51.6356 16.7422 52.4689 17.2854 53.345 18.1598C54.2211 19.0342 54.7615 19.8682 55.2161 21.0354C55.5595 21.9154 55.9658 23.2406 56.0767 25.678C56.1979 28.3154 56.2221 29.1048 56.2221 35.781C56.2221 42.4572 56.1979 43.2466 56.0767 45.884C55.9656 48.3214 55.5573 49.6462 55.2161 50.5266C54.7615 51.6938 54.2199 52.5266 53.345 53.4002C52.4701 54.2738 51.6356 54.8158 50.4677 55.2702C49.5872 55.6134 48.2612 56.0194 45.8223 56.1302C43.1855 56.2514 42.3934 56.2756 35.7132 56.2756C29.033 56.2756 28.2432 56.2514 25.6072 56.1302Z" />
+            </svg>
+
+            <span>Falar no WhatsApp</span>
           </a>
-
         </div>
-
       </div>
     </main>
   );
